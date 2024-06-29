@@ -16,7 +16,14 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: #96df9c;
+  background: linear-gradient(
+    to right top,
+    #1db9ff,
+    #a2a0ff,
+    #fb7ad4,
+    #ff677a,
+    #f48603
+  );
 }
 
 .bigbox {
@@ -29,7 +36,15 @@ body {
 .topcantainer {
   width: 100%;
   height: 100px;
-  background: #508d59;
+  background: linear-gradient(
+    to right top,
+    #1db9ff,
+    #a2a0ff,
+    #f702ad,
+    #bd2d3e,
+    #90e65f
+  );
+  box-shadow: 2px 3px 3px rgba(2, 10, 2, 2);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,16 +82,46 @@ body {
 .bubble {
   width: 50px;
   height: 40px;
+  color: #ffff;
   border-radius: 50%;
-  background: #63bb59;
+  background: linear-gradient(
+    to right top,
+    #1dff1d,
+    #a2a0ff,
+    #f702ad,
+    #dfee1300,
+    #90e65f
+  );
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 800;
   cursor: pointer;
+  box-shadow: 2px 3px 3px rgba(2, 10, 2, 2);
 }
 #hitElement {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* 
+.btn {
+  width: 100px;
+  background-color: blue;
+  margin-top: 30px;
+} */
+
+@media only screen and (max-width: 390px) {
+  .topcantainer {
+    gap: 2%;
+  }
+
+  .elem h3 {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 430) {
+  .topcantainer {
+    gap: 2%;
+  }
 }

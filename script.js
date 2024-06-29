@@ -1,4 +1,4 @@
-var TimeUpade = 10;
+var TimeUpade = 60;
 var RandomNumber = "";
 var scoureIncress = 0;
 var lose = 0;
@@ -7,11 +7,6 @@ function score() {
   scoureIncress += 10;
   document.querySelector("#GetScoure").textContent = scoureIncress;
 }
-
-// function losescore() {
-//   lose -= 10;
-//   document.querySelector("#GetScoure").textContent = lose;
-// }
 
 function hit() {
   RandomNumber = Math.floor(Math.random() * 10);
@@ -36,8 +31,9 @@ function setTime() {
       document.querySelector("#Timer").textContent = TimeUpade;
     } else {
       clearInterval = timeClear;
-      document.querySelector("#hitElement").innerHTML =
-        "<div><h1>Game Over</h1></div>  ";
+      document.querySelector(
+        "#hitElement"
+      ).innerHTML = `<div><h1>Game Over <br> Total Score ${scoureIncress}</h1></div> <br><br> <button onclick="window.location.reload()"  style="background-color: green; color: white; font-size: 10px; padding: 7px 15px; border: none; border-radius: 5px;"> <h1> Game Refresh </h1></button>`;
     }
   }, 1000);
 }
